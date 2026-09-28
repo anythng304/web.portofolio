@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #061d3d;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   SETIAP HALAMAN
+========================= */
+
+.page {
+    min-height: 100vh;
+    width: 100%;
+    padding: 70px 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(15, 55, 100, 0.35),
+            transparent 65%
+        ),
+        #061d3d;
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.cover {
+    justify-content: center;
+}
+
+.main-photo {
+    width: min(760px, 90%);
+    height: auto;
+    display: block;
+    object-fit: cover;
+
+    border: 3px solid rgba(255, 255, 255, 0.1);
+
+    margin-bottom: 25px;
+}
+
+.about {
+    font-size: clamp(55px, 9vw, 110px);
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    color: #68a5ff;
+
+    -webkit-text-stroke: 2px white;
+
+    text-shadow:
+        4px 5px 0 #315fa5,
+        7px 8px 0 rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   NAMA
+========================= */
+
+.names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: clamp(35px, 6vw, 75px);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.sean {
+    color: #c66a16;
+    -webkit-text-stroke: 1.5px white;
+}
+
+.and {
+    color: #b71920;
+    -webkit-text-stroke: 1.5px white;
+}
+
+.leo {
+    color: #5724dc;
+    -webkit-text-stroke: 1.5px white;
+}
+
+
+/* =========================
+   POLAROID
+========================= */
+
+.polaroid {
+    width: min(620px, 88%);
+    background: #f7f7f7;
+
+    padding: 20px 20px 65px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 35px;
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   TEKS CERITA
+========================= */
+
+.page p {
+    width: min(1200px, 94%);
+
+    font-size: clamp(18px, 2.2vw, 32px);
+    line-height: 1.55;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   PENUTUP
+========================= */
+
+.ending h2 {
+    font-size: clamp(55px, 10vw, 110px);
+
+    color: white;
+
+    font-weight: 900;
+
+    margin-top: 5px;
+
+    text-shadow:
+        3px 4px 0 #000,
+        6px 7px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   ANIMASI
+========================= */
+
+.polaroid,
+.page p,
+.about,
+.names,
+.ending h2 {
+    animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        min-height: 100svh;
+        padding: 45px 5%;
+    }
+
+    .main-photo {
+        width: 92%;
+    }
+
+    .names {
+        gap: 10px;
+        font-size: 32px;
+    }
+
+    .about {
+        font-size: 60px;
+    }
+
+    .polaroid {
+        width: 94%;
+        padding: 12px 12px 45px;
+        margin-bottom: 28px;
+    }
+
+    .page p {
+        font-size: 17px;
+        line-height: 1.6;
+        width: 95%;
+    }
+
+    .ending h2 {
+        font-size: 55px;
+    }
+}
